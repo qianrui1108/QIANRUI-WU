@@ -128,8 +128,9 @@
       align-items: center;
     }
 
+    /* 图片尺寸增大：从240px改为480px，同时保持宽高比自适应 */
     .reflection-img {
-      max-width: 240px;
+      max-width: 480px;
       width: 100%;
       height: auto;
       border-radius: 20px;
@@ -178,6 +179,7 @@
       margin: 0;
     }
 
+    /* 响应式调整：小屏幕上适当缩小图片，但依然比原来的180px大 */
     @media (max-width: 700px) {
       .content-card {
         padding: 1.8rem 1.4rem;
@@ -196,7 +198,13 @@
         padding: 0.4rem 0.9rem;
       }
       .reflection-img {
-        max-width: 180px;
+        max-width: 360px;   /* 移动端也保持较大的尺寸，原先是180px */
+      }
+    }
+
+    @media (max-width: 450px) {
+      .reflection-img {
+        max-width: 280px;   /* 超小屏再稍微缩小一点，避免溢出 */
       }
     }
   </style>
@@ -215,8 +223,8 @@
           src="week4 pic.jpg" 
           alt="Reflection on learning – a small decorative image" 
           class="reflection-img"
-          width="240"
-          height="240"
+          width="480"
+          height="480"
           loading="lazy"
         >
       </figure>

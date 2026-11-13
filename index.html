@@ -215,6 +215,87 @@
       margin-top: 0.5rem;
     }
 
+    /* ===== Week 1–6 链接卡片 ===== */
+    .outcome-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+
+    .outcome-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      padding: 0.75rem 1.1rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 4px 10px rgba(74, 43, 92, 0.08);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .outcome-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #4a2b5c, #8a5cb0);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .outcome-item:hover {
+      background: linear-gradient(135deg, #4a2b5c, #6b3f8a);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(74, 43, 92, 0.35);
+    }
+
+    .outcome-item:hover::before {
+      opacity: 1;
+    }
+
+    .week-num {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a2b5c, #6b3f8a);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
+    }
+
+    .outcome-item:hover .week-num {
+      background: #ffffff;
+      color: #4a2b5c;
+    }
+
+    .week-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.02rem;
+      color: #4a2b5c;
+      letter-spacing: 0.2px;
+      transition: color 0.25s ease;
+    }
+
+    .outcome-item:hover .week-label {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -365,6 +446,12 @@
         font-size: 0.9rem;
         padding: 0.6rem 1.1rem;
       }
+      .outcome-list {
+        gap: 0.55rem;
+      }
+      .outcome-item {
+        padding: 0.65rem 0.9rem;
+      }
     }
   </style>
 </head>
@@ -398,21 +485,28 @@
     <section id="first">
       <h3>First</h3>
       <p>Reflection on Learning Outcomes:</p>
-     
 
       <div class="outcome-list">
-        <div class="outcome-item">
-          <a href="week2.html" class="heading-link">Week 2 – Reflection</a>
-        </div>
-        <div class="outcome-item">
-          <a href="week3.html" class="heading-link">Week 3 – Reflection</a>
-        </div>
-        <div class="outcome-item">
-          <a href="week4.html" class="heading-link">Week 4 – Reflection</a>
-        </div>
-        <div class="outcome-item">
-          <a href="week 5.html" class="heading-link">Week 5 – Reflection</a>
-        </div>
+               <a href="week2.html" class="outcome-item">
+          <span class="week-num">02</span>
+          <span class="week-label">Week 2 – Reflection</span>
+        </a>
+        <a href="week3.html" class="outcome-item">
+          <span class="week-num">03</span>
+          <span class="week-label">Week 3 – Reflection</span>
+        </a>
+        <a href="week4.html" class="outcome-item">
+          <span class="week-num">04</span>
+          <span class="week-label">Week 4 – Reflection</span>
+        </a>
+        <a href="week 5.html" class="outcome-item">
+          <span class="week-num">05</span>
+          <span class="week-label">Week 5 – Reflection</span>
+        </a>
+        <a href="week6.html" class="outcome-item">
+          <span class="week-num">06</span>
+          <span class="week-label">Week 6 – Reflection</span>
+        </a>
       </div>
     </section>
 
